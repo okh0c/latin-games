@@ -47,31 +47,31 @@
 <div class="container">
   <div class="caja caja1">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2019/08/Forza-Horizon-4-Ultimate-Edition-Free-Download-min.jpg?w=680&ssl=1" alt="ForzaHorizon4">
-    <p>FORZA HORIZON 4 PC ESPAÑOL + Update v1.477.175 + ONLINE STEAM v2<br><span>Altos Requisitos, Carreras, Deportes, Multiplayer Online</span></p>
+    <p>FORZA HORIZON 4 PC ESPAÑOL + Update v1.477.175<br><span>Altos Requisitos, Carreras, Online</span></p>
   </div>
   <div class="caja caja2">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2022/09/Phasmophobia-Apocalypse-Pivigames.png?resize=780%2C439&ssl=1" alt="Phasmophobia">
-    <p>PHASMOPHOBIA PC ESPAÑOL v0.8.0.5 ONLINE STEAM v6<br><span>Altos Requisitos, Multiplayer Online, Terror</span></p>
+    <p>PHASMOPHOBIA PC ESPAÑOL v0.8.0.5 ONLINE<br><span>Altos Requisitos, Online, Terror</span></p>
   </div>
   <div class="caja caja3">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2021/05/Rust-para-PC-PiviGames.jpg?w=620&ssl=1" alt="Rust">
-    <p>RUST PC ESPAÑOL v2366 + ONLINE CON SERVIDORES<br><span>Acción, Altos Requisitos, Multiplayer Online, Mundo Abierto, Supervivencia, Terror</span></p>
+    <p>RUST PC ESPAÑOL v2366 + ONLINE<br><span>Altos Requisitos, Online, Mundo Abierto, Supervivencia, Terror</span></p>
   </div>
   <div class="caja caja4">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2019/03/Sekiro-Shadows-Die-Twice-Free-Download-min.jpg?w=670&ssl=1" alt="Sekiro">
-    <p>SEKIRO SHADOW DIE TWICE PC ESPAÑOL GOTY EDITION + Update v1.06<br><span>Acción, Aventura, Medios Requisitos, Mundo Abierto, Rol</span></p>
+    <p>SEKIRO SHADOW DIE TWICE PC ESPAÑOL GOTY EDITION + Update v1.06<br><span>Acción, Aventura, Medios Requisitos</span></p>
   </div>
   <div class="caja caja5">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2021/02/Stranded-Deep-Juego-PiviGames.jpg?w=620&ssl=1" alt="StrandedDeep">
-    <p>STRANDED DEEP PC ESPAÑOL v1.0.17.0.23 + ONLINE STEAM<br><span>Multiplayer Online, Mundo Abierto, Pantalla Dividida, Pocos Requisitos, Supervivencia</span></p>
+    <p>STRANDED DEEP PC ESPAÑOL v1.0.17.0.23 + ONLINE<br><span>Online, Mundo Abierto, Pantalla Dividida, Pocos Requisitos, Supervivencia</span></p>
   </div>
   <div class="caja caja6">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2019/05/Descargar-Planet-Nomands-1.0-PC-Español.jpg?w=616&ssl=1" alt="PlanetNomad">
-    <p>PLANET NOMADS PC ESPAÑOL v1.0.7.2<br><span>Aventura, Medios Requisitos, Mundo Abierto, Sandbox, Supervivencia</span></p>
+    <p>PLANET NOMADS PC ESPAÑOL v1.0.7.2<br><span>Aventura, Medios Requisitos, Mundo Abierto</span></p>
   </div>
   <div class="caja caja7">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2022/03/Dark-Light-PC-Espanol.jpg?w=616&ssl=1" alt="DarkLight">
-    <p>DARK LIGHT PC THE LOST v1.0.6.0<br><span>2D, Aventura, Medios Requisitos, Plataformas, Terror</span></p>
+    <p>DARK LIGHT PC THE LOST v1.0.6.0<br><span>2D, Aventura, Medios Requisitos, Plataformas</span></p>
   </div>
   <div class="caja caja8">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2022/04/Prehistoric-Kingdom-PiviGames.jpg?w=670&ssl=1" alt="PHK">
@@ -83,18 +83,63 @@
   </div>
   <div class="caja caja10">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2021/03/The-Binding-Of-Isaac-Repentance-PC-Español-PiviGames.jpg?w=616&ssl=1" alt="TBOS">
-    <p>THE BINDING OF ISAAC REBIRT REPENTANCE V1.7.9B PC ESPAÑOL+ ONLINE<br><span>2D, Aventura, Medios Requisitos, Multiplayer Online</span></p>
+    <p>THE BINDING OF ISAAC REBIRT REPENTANCE V1.7.9B PC ESPAÑOL+ ONLINE<br><span>2D, Aventura, Medios Requisitos, Online</span></p>
   </div>
 </div>
 
 
-<div class="pagination">
-  <ul>
-    <li><span><box-icon name='chevron-left'></box-icon>Prev</span></li>
-    <li class="numb"><span></span></li>
-    <li><span><box-icon name='chevron-right'></box-icon>Next</span></li>
+<div class="container-pagination">
+  <div class="pagination">
+  <button class="btn1" onclick="backBtn()"><ion-icon name="chevron-back-outline"></ion-icon> prev</button>
+  <ul class="ul-pagination">
+    <li class="li-pagination active" value="1" onclick="activeLink()">1</li>
+    <li class="li-pagination" value="2" onclick="activeLink()">2</li>
+    <li class="li-pagination" value="3" onclick="activeLink()">3</li>
+    <li class="li-pagination" value="4" onclick="activeLink()">4</li>
+    <li class="li-pagination" value="5" onclick="activeLink()">5</li>
+    <li class="li-pagination" value="6" onclick="activeLink()">6</li>
   </ul>
+  <button class="btn2" onclick="nextBtn()"> next<ion-icon name="chevron-forward-outline"></ion-icon></button>
+  </div>
 </div>
+
+
+<!-- script PAGINATION -->
+
+<script>
+  let link = document.getElementsByClassName("li-pagination");
+
+  let currentValue = 1;
+
+  function activeLink(){
+    for(l of link){
+      l.classList.remove("active");
+    }
+    event.target.classList.add("active")
+    currentValue = event.target.value;
+  }
+
+  function backBtn(){
+    if(currentValue > 1){
+      for(l of link){
+        l.classList.remove("active");
+      }
+      currentValue--;
+      link[currentValue-1].classList.add("active");
+    }
+  }
+  function nextBtn(){
+    if(currentValue < 6){
+      for(l of link){
+        l.classList.remove("active");
+      }
+      currentValue++;
+      link[currentValue-1].classList.add("active");
+    }
+  }
+
+
+</script>
 
 
 <!-- ___ -->

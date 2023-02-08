@@ -21,11 +21,6 @@
 /*...*/
 
 
-*{
-  margin: 0;
-  padding: 0;
-}
-
 *,
 *::before,
 *::after {
@@ -199,8 +194,9 @@ html {
 
 
 body{
-  /*background-color: #F5E8C7;*/
-  background-image: url(img/codfondo.jpg);
+  background: #E8CBC0;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #636FA4, #E8CBC0);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #636FA4, #E8CBC0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background-size: auto;
 
 }
@@ -209,57 +205,22 @@ body{
 .quote{
   text-align: center;
   font-family: royalacid;
-  font-size: 20px;
-  mix-blend-mode: difference;
+  font-size: 26px;
   color: white;
-  filter: invert(1);
   text-shadow: 1px 2px black;
   margin-top: 120px;
   font-weight: bold;
 }
+
   .subquote{
+    color: lightgray;
     text-align: center;
-    font-size: 15px;
-    animation: pulse 3s linear infinite;
-    text-shadow: -4px 3px 0 #fff, -10px 7 rgb(220, 220, 220);
-    margin-bottom: 90px;
+    font-size: 19px;
+    margin-bottom: 80px;
     font-weight: bold;
+    text-shadow: 1px 1px black;
   }
-  @keyframes pulse{
-    0%{
-      color: rgb(70, 70, 245);
-    }
-    10%{
-      color: rgb(242, 69, 69);
-    }
-    20%{
-      color: rgb(227, 177, 70);
-    }
-    30%{
-      color: rgb(153, 223, 82);
-    }
-    40%{
-      color: rgb(85, 208, 144);
-    }
-    50%{
-      color: rgb(70, 194, 192);
-    }
-    60%{
-      color: rgb(83, 96, 199);
-    }
-    70%{
-      color: rgb(194, 88, 230);
-    }
-    80%{
-      color: rgb(162, 63, 126);
-    }
-    90%{
-      color: rgb(206, 37, 37);
-    }
-    100%{
-      color: rgb(9, 73, 213);
-    }
-  }
+
 
 
 .contact{
@@ -314,41 +275,116 @@ body{
 .animate__zoomInDown {
   display: inline-block;
   margin: 0 0.5rem;
-
   animation: bounce; /* referring directly to the animation's @keyframe declaration */
   animation-duration: 3s; /* don't forget to set a duration! */
 }
 
 .container{
-  width: 100%;
+  max-width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
 
+.container-pagination{
+  width: 100%;
+  height: 15vh;
+  margin-bottom: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.pagination{
+  display: flex;
+  align-items: center;
+  background: #fff;
+  color: #383838;
+  padding: 10px 40px;
+  border-radius: 6px;
+}
+  .ul-pagination{
+   margin: 20px 30px;
+ }
+  .ul-pagination .li-pagination{
+   display: inline-block;
+   margin: 0 10px;
+   width: 45px;
+   height: 45px;
+   border-radius: 50%;
+   text-align: center;
+   font-size: 22px;
+   font-weight: 500;
+   line-height: 45px;
+   cursor: pointer;
+   background-position: 0 -45px;
+   transition: background-position 0.2s;
+ }
+  .ul-pagination .li-pagination.active{
+    color: #fff;
+    background-image: linear-gradient(#ff4568, #ff4568);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+
+  @media (max-width:500px){
+    .pagination{
+      width: 380px;
+      height: 120px;
+    }
+  }
+  @media (max-width:500px){
+    .ul-pagination .li-pagination{
+      display: inline;
+    }
+  }
+
+
+.btn1, .btn2{
+  display: inline-flex;
+  align-items: center;
+  font-size: 22px;
+  font-weight: 500;
+  color: #383838;
+  background: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+  .btn1 ion-icon{
+    width: 24px;
+    margin-right: 15px;
+  }
+  .btn2 ion-icon{
+    width: 24px;
+    margin-left: 15px;
+  }
+
+
 .titulo{
-  width: 97%;
   text-align: center;
   font-weight: bold;
   margin: 30px;
-  font-size: 30px;
+  font-size: 20px;
   text-shadow: 1px 2px lightblue;
   color: white;
 }
 
 
 .caja{
-  padding: 80px;
+  margin: 40px;
 }
   .caja img{
-    width: 420px;
-    height: 280px;
-    border-radius: 30px;
+    max-width: 320px;
+    max-height: 280px;
+    border-radius: 20px;
   }
   .caja p{
+    word-wrap:break-word;
     text-align: center;
-    font-size: 10px;
+    font-size: 9px;
     font-weight: bold;
     color: white;
     text-shadow: 1px 1px #4B0082;
@@ -392,6 +428,7 @@ div.bg {
   transform: scaleY(1.05);
   transform-origin: top;
 }
+
 div.fg{
   background-image: repeating-linear-gradient( 5deg,
     var(--gold) 0% ,
@@ -411,7 +448,6 @@ div.fg{
 
 .middlepage{
   display: flex;
-  background-image: url(img/bg.jpg);
   justify-content: space-around;
 }
 
@@ -520,7 +556,6 @@ footer{
 .section-heading{
   font-size: 3rem;
   color: var(--primary);
-  padding: 1rem 0;
   font-family: impact;
   text-shadow: 2px 1px black;
 }
@@ -686,8 +721,15 @@ footer{
 
 
 #tranding{
-  background-image:url(img/sh2.png);
+  background: #6190E8;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #A7BFE8, #6190E8);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #A7BFE8, #6190E8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  /*
+  background-image:url(img/44.jpg);
+  background-size: 100% 100%;
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  */
 }
