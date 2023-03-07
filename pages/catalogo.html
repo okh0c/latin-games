@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../styles.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Latin Games ARG</title>
   </head>
   <body>
@@ -28,12 +29,7 @@
     <h1>Latin Games</h1>
     <h2>Tus juegos favoritos</h2>
     <h2>Facil y Rapido</h2>
-    <div class="login">
-      <a href="#" class="user"><i class="ri-user-fill"></i>Iniciar Sesion</a>
-      <a href="#" class="">Registrarse</a>
-      <div class="bx bx-menu" id="menu-icon">
-      </div>
-    </div>
+    <div class="bx bx-menu" id="menu-icon">
   </div>
 </header>
 
@@ -49,20 +45,419 @@
   <div id="search-container">
     <input type="text" id="find" placeholder="Pa' buscar" onkeyup="search()">
   </div>
-  <div id="buttons">
-    <button class="button-value" onclick="filterProduct('all')">Todos</button>
-    <button class="button-value" onclick="filterProduct('multi')">Multiplayer</button>
-    <button class="button-value" onclick="filterProduct('acci')">Acción</button>
-    <button class="button-value" onclick="filterProduct('horror')">Terror</button>
-    <button class="button-value" onclick="filterProduct('survi')">Supervivencia</button>
-    <button class="button-value" onclick="filterProduct('simul')">Simulación</button>
-    <button class="button-value" onclick="filterProduct('cars')">Coches</button>
+  <div class="buttons">
+    <a href="catalogo-filter.html">
+    <button class="button-value active" data-name="all">Todos</button>
+    <button class="button-value" data-name="acci">Acción</button>
+    <button class="button-value" data-name="horror">Terror</button>
+    <button class="button-value" data-name="survi">Supervivencia</button>
+    <button class="button-value" data-name="simu">Simulación</button>
+    <button class="button-value" data-name="cars">Coches</button>
+    <button class="button-value" data-name="estrat">Estrategia</button>
+    </a>
   </div>
 </div>
 <div class="titulo2">ULTIMAS NOVEDADES</div>
 <div class="container-cat principal">
-  <div class="caja caja1 hidden">
-    <a href="#" id="aventura" category="pr">
+
+
+  <div data-filter="acci" class="caja caja1 hidden">
+    <a href="./games/sotf.html"  category="ar">
+    <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2023/03/Scars-Above-Pivigames.jpg?w=670&ssl=1" alt="SonsOfTheForest-Game">
+    <div class="content-img">
+      PESO: 13.66 GB
+      <br>
+      UPDATE: V129298
+      <br>
+      ONLINE: NOPE
+    </div>
+    <p>SCARS ABOVE<br><span>Acción, Altos Requisitos, Aventura, Shooter, Terror</span></p>
+    </a>
+  </div>
+
+  <div data-filter="acci" class="caja caja1 hidden">
+    <a href="./games/nms.html"  category="ar">
+    <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2022/08/No-Mans-Sky-Waypoint.jpg?w=576&ssl=1" alt="NoMan'sSky-Game">
+    <div class="content-img">
+      PESO: 10 GB
+      <br>
+      UPDATE: V4.10
+      <br>
+      ONLINE: NOPE
+    </div>
+    <p>NO MAN'S SKY<br><span>Acción, Altos Requisitos, Aventura, Mundo Abierto</span></p>
+    </a>
+  </div>
+
+  <div data-filter="acci" class="caja caja1 hidden">
+    <a href="./games/hwsde.html"  category="ar">
+    <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2023/02/Hogwarts-Legacy-Deluxe-Edition-Pivigames-2.png?w=770&ssl=1" alt="HowartsLegacy-Game">
+    <div class="content-img">
+      PESO: 76 GB
+      <br>
+      UPDATE: DELUXE EDITION
+      <br>
+      ONLINE: NOPE
+    </div>
+    <p>HOGWARTS LEGACY<br><span>Acción, Mundo Abierto, Rol, Altos Requisitos</span></p>
+    </a>
+  </div>
+
+  <div data-filter="acci" class="caja caja1 hidden">
+    <a href="./games/hwsde.html"  category="ar">
+    <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2022/10/Asterigos-Curse-of-the-Stars-Pivigames.jpg?w=670&ssl=1" alt="AsterigosCurseOfTheStars-Game">
+    <div class="content-img">
+      PESO: 8.9 GB
+      <br>
+      UPDATE: V1.06
+      <br>
+      ONLINE: NOPE
+    </div>
+    <p>ASTERIGOS CURSE OF THE STARS<br><span>Altos Requisitos, Aventura, Rol</span></p>
+    </a>
+  </div>
+
+  <div data-filter="survi" class="caja caja10 hidden">
+    <a href="./games/gh.html" category="ar">
+    <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2018/08/Green-Hell-Free-Download-min.jpg?w=670&ssl=1" alt="GreenHell-Game">
+    <div class="content-img">
+      PESO: 4.2 GB
+      <br>
+      UPDATE: V2.4.2
+      <br>
+      ONLINE: LIVE
+    </div>
+    <p>GREEN HELL<br><span>Altos Requisitos, Aventura, Multiplayer Online, Mundo Abierto, Supervivencia</span></p>
+    </a>
+  </div>
+
+  <div data-filter="simu" class="caja caja1 hidden">
+    <a href="./games/dnestor.html"  category="ar">
+    <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2023/02/Digimon-World-Next-Order-PC.jpg?w=670&ssl=1" alt="DigimonWorldNextOrder-Game">
+    <div class="content-img">
+      PESO: 3 GB
+      <br>
+      UPDATE: V21/02/23
+      <br>
+      ONLINE: NOPE
+    </div>
+    <p>DIGIMON WORLD NEXT ORDER<br><span>Altos Requisitos, Rol, Simulación</span></p>
+    </a>
+  </div>
+
+  <div data-filter="acci" class="caja caja1 hidden">
+    <a href="./games/ncs.html"  category="mr">
+    <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2023/02/Necesse-Pivigames.jpg?w=670&ssl=1" alt="Necesse-Game">
+    <div class="content-img">
+      PESO: 200 MB
+      <br>
+      UPDATE: V12/12/19
+      <br>
+      ONLINE: NOPE
+    </div>
+    <p>NECESSE<br><span>Acción, Aventura, Medios Requisitos, Pixelados, Sandbox</span></p>
+    </a>
+  </div>
+
+  <div data-filter="estrat" class="caja caja1 hidden">
+    <a href="./games/dsw.html"  category="ar">
+    <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2022/05/Dune-Spice-Wars-Pivigames.jpg?w=670&ssl=1" alt="DuneSpiceWars-Game">
+    <div class="content-img">
+      PESO: 1 GB
+      <br>
+      UPDATE: V0.4.19.22330
+      <br>
+      ONLINE: NOPE
+    </div>
+    <p>DUNE SPICE WARS<br><span>Altos Requisitos, Estrategia</span></p>
+    </a>
+  </div>
+
+  <div data-filter="survi" class="caja caja1 hidden">
+    <a href="./games/wwz.html"  category="ar">
+    <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2020/05/World-War-Z-Aftermath-PiviGames.jpg?w=670&ssl=1" alt="WorldWarZAftermath-Game">
+    <div class="content-img">
+      PESO: 29 GB
+      <br>
+      UPDATE: V20.02.2023
+      <br>
+      ONLINE: NOPE
+    </div>
+    <p>WORLD WAR Z<br><span>Altos Requisitos, Mundo Abierto, Supervivencia</span></p>
+    </a>
+  </div>
+
+  <div data-filter="estrat" class="caja caja1 hidden">
+    <a href="./games/civvi.html"  category="mr">
+    <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2020/07/SID-MEIERS-Civilization-VI-PiviGames.jpg?w=620&ssl=1" alt="CivilizationVI-Game">
+    <div class="content-img">
+      PESO: 8 GB
+      <br>
+      UPDATE: V1.0.12.37
+      <br>
+      ONLINE: LIVE
+    </div>
+    <p>CIVILIZATION VI<br><span>Estrategia, Medios Requisitos, Multiplayer Online, Simulación</span></p>
+    </a>
+  </div>
+
+  <div data-filter="acci" class="caja caja1 hidden">
+    <a href="./games/ah.html"  category="ar">
+    <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2023/02/Atomic-Heart-Pivigames.jpg?w=670&ssl=1" alt="AtomicHeart-Game">
+    <div class="content-img">
+      PESO: 27.04 GB
+      <br>
+      UPDATE: V20/02/23
+      <br>
+      ONLINE: NOPE
+    </div>
+    <p>ATOMIC HEART<br><span>Acción, Altos Requisitos, Shooter</span></p>
+    </a>
+  </div>
+
+  <div data-filter="simu" class="caja caja1 hidden">
+    <a href="./games/ftblmgr2023.html"  category="ar">
+    <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2022/11/football-manager-2023-pc-mac-juego-steam-europe-cover.jpg?w=616&ssl=1" alt="FootballManager2023-Game">
+    <div class="content-img">
+      PESO: 20 GB
+      <br>
+      UPDATE: V19/02/23
+      <br>
+      ONLINE: NOPE
+    </div>
+    <p>FOOTBALL MANAGER 2023<br><span>Medios Requisitos, Simulación</span></p>
+    </a>
+  </div>
+
+
+</div>
+
+
+<div class="container-cat">
+
+  <div data-filter="acci" class="caja caja10 hidden">
+    <a href="./games/pixark.html" category="mr">
+    <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2022/09/PIXARK-Ultima-version-pivigames.jpg?w=616&ssl=1" alt="Pixark-Game">
+    <div class="content-img">
+      PESO: 1.3 GB
+      <br>
+      UPDATE: V1.176
+      <br>
+      ONLINE: LIVE
+    </div>
+    <p>PIXARK<br><span>Acción, Aventura, Construcción, Medios Requisitos, Multiplayer Online, Mundo Abierto, Sandbox, Supervivencia</span></p>
+    </a>
+  </div>
+  <div data-filter="simu" class="caja caja10 hidden">
+    <a href="./games/goingmedieval.html" category="ar">
+    <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2021/05/Going-Medieval-para-PC-en-Espanol-PiviGames.jpg?w=620&ssl=1" alt="GoingMedieval-Game">
+    <div class="content-img">
+      PESO: 330 MB
+      <br>
+      UPDATE: V0.12.10
+      <br>
+      ONLINE: NOPE
+    </div>
+    <p>GOING MEDIEVAL<br><span>Altos Requisitos, Construcción, Simulación, Supervivencia</span></p>
+    </a>
+  </div>
+  <div data-filter="survi" class="caja caja1 hidden">
+    <a href="./games/DwarfFortress.html"  category="ar">
+    <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2023/01/Dwarf-Fortress-PC-Pivigames.jpg?w=670&ssl=1" alt="DwarfFortress-Game">
+    <div class="content-img">
+      PESO: 2.6 GB
+      <br>
+      UPDATE: V50.07
+      <br>
+      ONLINE: NOPE
+    </div>
+    <p>DWARF FORTRESS<br><span>Construcción, Pixelados, Pocos Requisitos, Supervivencia</span></p>
+    </a>
+  </div>
+  <div data-filter="estrat" class="caja caja1 hidden">
+    <a href="./games/ancientcities.html"  category="ar">
+    <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2021/02/Ancient-Cities-PiviGames.jpg?w=670&ssl=1" alt="AncientCities-Game">
+    <div class="content-img">
+      PESO: 2.6 GB
+      <br>
+      UPDATE: V0.2.12.7
+      <br>
+      ONLINE: NOPE
+    </div>
+    <p>ANCIENT CITIES<br><span>Altos Requisitos, Construcción, Estrategia, Sandbox, Supervivencia</span></p>
+    </a>
+  </div>
+  <div data-filter="simu" class="caja caja1 hidden">
+    <a href="./games/prehistorickingdom.html"  category="ar">
+    <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2022/04/Prehistoric-Kingdom-PiviGames.jpg?w=670&ssl=1" alt="PrehistoricKingdom-Game">
+    <div class="content-img">
+      PESO: 5.33 GB
+      <br>
+      UPDATE: V1.1.1.116
+      <br>
+      ONLINE: NOPE
+    </div>
+    <p>PREHISTORIC KINGDOM<br><span>Altos Requisitos, Construcción, Simulación</span></p>
+    </a>
+  </div>
+  <div data-filter="acci" class="caja caja1 hidden">
+    <a href="./games/wanteddead.html"  category="ar">
+    <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2023/02/Wanted-Dead-para-PC-Espanol-Pivigames.jpg?w=670&ssl=1" alt="WantedDead-Game">
+    <div class="content-img">
+      PESO: 32 GB
+      <br>
+      UPDATE: V14/02/23
+      <br>
+      ONLINE: NOPE
+    </div>
+    <p>WANTED DEAD<br><span>Acción, Altos Requisitos, Shooter</span></p>
+    </a>
+  </div>
+  <div data-filter="acci" class="caja caja1 hidden">
+    <a href="./games/brotato.html"  category="mr">
+    <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2022/11/Brotato-Juego.jpg?w=670&ssl=1" alt="Brotato-Game">
+    <div class="content-img">
+      PESO: 101 MB
+      <br>
+      UPDATE: V0.8.0.3
+      <br>
+      ONLINE: NOPE
+    </div>
+    <p>BROTATO<br><span>2D, Acción, Pocos Requisitos</span></p>
+    </a>
+  </div>
+  <div data-filter="acci" class="caja caja1 hidden">
+    <a href="./games/teardown.html"  category="mr">
+    <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2020/10/Teardown-PiviGames-min.jpg?w=670&ssl=1" alt="Teardown-Game">
+    <div class="content-img">
+      PESO: 2.9 GB
+      <br>
+      UPDATE: V1.3.0
+      <br>
+      ONLINE: LIVE
+    </div>
+    <p>TEARDOWN<br><span>Construcción, Medios Requisitos, Multiplayer Online, Sandbox</span></p>
+    </a>
+  </div>
+  <div data-filter="survi" class="caja caja1 hidden">
+    <a href="./games/corekeeper.html"  category="mr">
+    <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2022/03/Core-Keeper-PiviGames.jpg?w=670&ssl=1" alt="CoreKeeper-Game">
+    <div class="content-img">
+      PESO: 350 MB
+      <br>
+      UPDATE: V0.5.2.3
+      <br>
+      ONLINE: LIVE
+    </div>
+    <p>CORE KEEPER<br><span>Construcción, Medios Requisitos, Multiplayer Online, Sandbox, Supervivencia</span></p>
+    </a>
+  </div>
+  <div class="caja caja4 hidden" data-filter="acci">
+    <a href="./games/DyingLight2.html"  category="ar">
+    <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2022/02/Dying-Light-2-para-PC-PiviGames.jpg?w=620&ssl=1" alt="DyingLight2-Game">
+    <div class="content-img">
+      PESO: 40.55 GB
+      <br>
+      UPDATE: V1.9.3
+      <br>
+      ONLINE: LIVE
+    </div>
+    <p>DYING LIGHT 2 STAY HUMAN<br><span>Acción, Altos Requisitos, Multiplayer Online, Supervivencia, Zombies</span></p>
+    </a>
+  </div>
+  <div data-filter="survi" class="caja caja5 hidden">
+    <a href="./games/rimworld.html" category="pr">
+    <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2022/10/Rimworld-Biotech-Pivigames.jpg?w=616&ssl=1" alt="Rimworld-Game">
+    <div class="content-img">
+      PESO: 555 MB
+      <br>
+      UPDATE: V1.4.3641
+      <br>
+      ONLINE: NOPE
+    </div>
+    <p>RIMWORLD<br><span>32 Bits, Construcción, Pixelados, Pocos Requisitos, Sandbox, Supervivencia</span></p>
+    </a>
+  </div>
+  <div data-filter="estrat" class="caja caja10 hidden">
+    <a href="./games/heartsofironiv.html" category="pr">
+    <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2022/02/Hearts-of-Iron-IV-Blood-Alone-Pivigames.jpg?w=616&ssl=1" alt="HeartsOfIronIV4BloodAlone-Game">
+    <div class="content-img">
+      PESO: 3.99 GB
+      <br>
+      UPDATE: V1.12.10
+      <br>
+      ONLINE: LIVE
+    </div>
+    <p>HEARTS OF IRON IV<br><span>Estrategia, Multiplayer Online, Pocos Requisitos</span></p>
+    </a>
+  </div>
+  <div data-filter="acci" class="caja caja1 hidden">
+    <a href="./games/slimerancher2.html"  category="ar">
+    <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2022/09/Slime-Rancher-2-Pivigames.jpg?w=670&ssl=1" alt="SlimeRancher2-Game">
+    <div class="content-img">
+      PESO: 1.4 GB
+      <br>
+      UPDATE: V0.2.0
+      <br>
+      ONLINE: NOPE
+    </div>
+    <p>SLIME RANCHER 2<br><span>Acción, Altos Requisitos, Aventura, Mundo Abierto</span></p>
+    </a>
+  </div>
+  <div data-filter="acci" class="caja caja6 hidden">
+    <a href="./games/WARTALES.html" category="pr">
+    <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2021/12/Wartales-PiviGames-min.jpg?w=670&ssl=1" alt="Wartales-Game">
+    <div class="content-img">
+      PESO: 9.0 GB
+      <br>
+      UPDATE: V1.22650
+      <br>
+      ONLINE: LIVE
+    </div>
+    <p>WARTALES<br><span>Multiplayer Online, Mundo Abierto, Pocos Requisitos, Rol</span></p>
+    </a>
+  </div>
+  <div data-filter="survi" class="caja caja1 hidden">
+    <a href="./games/ThePlanetCrafter.html"  category="pr">
+    <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2022/03/The-Planet-Crafter-PiviGames.jpg?w=670&ssl=1" alt="ThePlanetCrafter-Game">
+    <div class="content-img">
+      PESO: 2.66 GB
+      <br>
+      UPDATE: V0.7.003
+      <br>
+      ONLINE: NOPE
+    </div>
+    <p>THE PLANET CRAFTER<br><span>Construcción, Medios Requisitos, Mundo Abierto, Supervivencia</span></p>
+    </a>
+  </div>
+  <div data-filter="simu" class="caja caja1 hidden">
+    <a href="./games/PharaohANewEra.html"  category="mr">
+    <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2023/02/Pharaoh-A-New-Era-Pivigames.jpg?w=670&ssl=1" alt="PharaohANewEra-Game">
+    <div class="content-img">
+      PESO: 350 MB
+      <br>
+      UPDATE: V1.1
+      <br>
+      ONLINE: NOPE
+    </div>
+    <p>PHARAOH A NEW ERA<br><span>Construcción, Medios Requisitos, Simulación</span></p>
+    </a>
+  </div>
+  <div data-filter="acci" class="caja caja1 hidden">
+    <a href="./games/returnal.html"  category="ar">
+    <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2023/02/Returnal-Pivigames.jpg?w=670&ssl=1" alt="Returnal-Game">
+    <div class="content-img">
+      PESO: 51.03 GB
+      <br>
+      UPDATE: V17.02.2023
+      <br>
+      ONLINE: NOPE
+    </div>
+    <p>RETURNAL<br><span>Acción, Altos Requisitos, Shooter</span></p>
+    </a>
+  </div>
+  <div data-filter="acci" class="caja caja1 hidden">
+    <a href="./games/portaldungeon.html"  category="pr">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2023/02/Portal-Dungeon-Pivigames.jpg?w=670&ssl=1" alt="PortalDungeon-Game">
     <div class="content-img">
       PESO: 350 MB
@@ -74,8 +469,8 @@
     <p>PORTAL DUNGEON<br><span>Aventura, Multiplayer Online, Pocos Requisitos</span></p>
     </a>
   </div>
-  <div class="caja caja2 hidden">
-    <a href="#" id="accion" category="pr">
+  <div data-filter="acci" class="caja caja2 hidden">
+    <a href="./games/herosiege.html"  category="pr">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2019/08/Descargar-Hero-Siege-Ultima-Version-PC-Gratis.jpg?w=620&ssl=1" alt="HeroSiege-Game">
     <div class="content-img">
       PESO: 892 MB
@@ -87,8 +482,8 @@
     <p>HERO SIEGE<br><span>2D, Acción, Indie, Multiplayer Online, Pocos Requisitos, Rol</span></p>
     </a>
   </div>
-  <div class="caja caja3 hidden">
-    <a href="#" id="accion" category="ar">
+  <div data-filter="acci" class="caja caja3 hidden">
+    <a href="./games/jojosbizarreadventure.html"  category="ar">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2022/09/JoJos-Bizarre-Adventure-AllStar-Battle-R-PC-Espanol.jpg?w=670&ssl=1" alt="JOJOSBIZARREADVENTUREALLSTARBATTLE-Game">
     <div class="content-img">
       PESO: 3.9 GB
@@ -100,21 +495,8 @@
     <p>JOJOS BIZARRE ADVENTURE ALL STAR BATTLE R<br><span>Altos Requisitos, Anime, Lucha, Multiplayer Online, Pantalla Dividida</span></p>
     </a>
   </div>
-  <div class="caja caja4 hidden">
-    <a href="#" id="accion" category="ar">
-    <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2022/02/Dying-Light-2-para-PC-PiviGames.jpg?w=620&ssl=1" alt="DyingLight2-Game">
-    <div class="content-img">
-      PESO: 40.55 GB
-      <br>
-      UPDATE: V1.9.2
-      <br>
-      ONLINE: LIVE
-    </div>
-    <p>DYING LIGHT 2 STAY HUMAN<br><span>Acción, Altos Requisitos, Multiplayer Online, Supervivencia, Zombies</span></p>
-    </a>
-  </div>
-  <div class="caja caja5 hidden">
-    <a href="#" id="accion" category="ar">
+  <div data-filter="acci" class="caja caja5 hidden">
+    <a href="./games/eldenring.html"  category="ar">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2022/02/Elden-Ring-Juego-PiviGames.jpg?w=616&ssl=1" alt="EldenRing-Game">
     <div class="content-img">
       PESO: 45 GB
@@ -126,8 +508,8 @@
     <p>ELDEN RING<br><span>Altos Requisitos, Multiplayer Online, Mundo Abierto, Rol, RPG</span></p>
     </a>
   </div>
-  <div class="caja caja6 hidden">
-    <a href="#" id="coches" category="ar">
+  <div data-filter="cars" class="caja caja6 hidden">
+    <a href="./games/forzahorizon5.html"  category="ar">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2021/11/Forza-Horizon-5-PiviGames.jpg?w=616&ssl=1" alt="ForzaHorizon5PremiumEdition-Game">
     <div class="content-img">
       PESO: 88.81 GB
@@ -139,8 +521,8 @@
     <p>FORZA HORIZON 5 PREMIUM EDITION<br><span>Altos Requisitos, Carreras, Multiplayer Online</span></p>
   </a>
   </div>
-  <div class="caja caja7 hidden">
-    <a href="#" id="accion" category="mr">
+  <div data-filter="acci" class="caja caja7 hidden">
+    <a href="./games/SkulTheHeroSlayer.html"  category="mr">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2022/08/Skul-The-Hero-Slayer-the-dark-mirror-PC-Pivigames.jpg?w=616&ssl=1" alt="SkulTheHeroSlayer-Game">
     <div class="content-img">
       PESO: 1.11 MB
@@ -152,8 +534,8 @@
     <p>SKUL THE HERO SLAYER<br><span>Acción, Aventura, Medios Requisitos, Pixelados, Plataformas</span></p>
     </a>
   </div>
-  <div class="caja caja8 hidden">
-    <a href="#" id="simulacion" category="mr">
+  <div data-filter="simu" class="caja caja8 hidden">
+    <a href="./games/UltimateBattleSimulator2.html"  category="mr">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2022/06/Ultimate-Epic-Battle-Simulator-2-Pivigames.jpg?w=670&ssl=1" alt="UltimateEpicBattleSimulator2-Game">
     <div class="content-img">
       PESO: 8.9 GB
@@ -165,8 +547,8 @@
     <p>ULTIMATE EPIC BATTLE SIMULATOR 2 <br><span>Altos Requisitos, Simulación</span></p>
     </a>
   </div>
-  <div class="caja caja9 hidden">
-    <a href="#" id="survival" category="ar">
+  <div data-filter="survi" class="caja caja9 hidden">
+    <a href="./games/valheim.html"  category="ar">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2021/02/Valheim-Online-PiviGames.jpg?w=620&ssl=1" alt="Valheim-Game">
     <div class="content-img">
       PESO: 600 MB
@@ -178,8 +560,8 @@
     <p>VALHEIM PC<br><span>Altos Requisitos, Multiplayer Online, Mundo Abierto, Supervivencia</span></p>
     </a>
   </div>
-  <div class="caja caja10 hidden">
-    <a href="#" id="estrategia" category="pr">
+  <div data-filter="estrat" class="caja caja10 hidden">
+    <a href="./games/stoneshard.html" category="pr">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2020/09/Stonehard-Way-Forward-PiviGames.jpg?w=650&ssl=1" alt="Stoneshard-Game">
     <div class="content-img">
       PESO: 500 MB
@@ -191,8 +573,8 @@
     <p>STONESHARD<br><span>Estrategia, Pocos Requisitos, Rol, RPG, Supervivencia</span></p>
     </a>
   </div>
-  <div class="caja caja10 hidden">
-    <a href="#" id="coches" category="ar">
+  <div data-filter="cars" class="caja caja10 hidden">
+    <a href="./games/EuroTruckSimulator2.html" category="ar">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2018/12/Descargar-Euro-Truck-Simulator-2-PC-Gratis-min.jpg?w=620&ssl=1" alt="EuroTruckSimulator2-Game">
     <div class="content-img">
       PESO: 10 GB
@@ -204,8 +586,8 @@
     <p>EURO TRUCK SIMULATOR 2<br><span>32 Bits, Carreras, Medios Requisitos, Multiplayer Online, Simulación</span></p>
     </a>
   </div>
-  <div class="caja caja10 hidden">
-    <a href="#" id="estrategia" category="mr">
+  <div data-filter="estrat" class="caja caja10 hidden">
+    <a href="./games/PrisionArchitect.html" category="mr">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2022/07/Prison-architect-free-for-life-pivigames.jpg?w=616&ssl=1" alt="PrisionArchitect-Game">
     <div class="content-img">
       PESO: 720 MB
@@ -217,11 +599,10 @@
     <p>PRISON ARCHITECT<br><span>32 Bits, Estrategia, Medios Requisitos</span></p>
     </a>
   </div>
-</div>
 
-<div class="container-cat">
-  <div class="caja caja1 hidden">
-    <a href="#" id="aventura" category="ar">
+
+  <div data-filter="acci" class="caja caja1 hidden">
+    <a href="./games/horizonzerodawn.html" category="ar">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2020/08/Horizon-Zero-Dawn-PiviGames.jpg?w=620&ssl=1" alt="HorizonZeroDawnCompleteEdition-Game">
     <div class="content-img">
       PESO: 60 GB
@@ -233,8 +614,8 @@
     <p>HORIZON ZERO DAWN COMPLETE EDITION<br><span>Altos Requisitos, Aventura, Mundo Abierto, Supervivencia</span></p>
     </a>
   </div>
-  <div class="caja caja2 hidden">
-    <a href="#" id="aventura" category="ar">
+  <div data-filter="acci" class="caja caja2 hidden">
+    <a href="./games/LEGOStarWarsTheSkywalkerSaga.html"  category="ar">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2022/04/LEGO_Star_Wars_The_Skywalker_Saga_PiviGames.jpg?w=616&ssl=1" alt="LEGOStarWarsTheSkywalkerSaga-Game">
     <div class="content-img">
       PESO: 36.5 GB
@@ -246,8 +627,8 @@
     <p>LEGO STAR WARS THE SKYWALKER SAGA DELUXE EDITION<br><span>Altos Requisitos, Aventura, Mundo Abierto, Pantalla Dividida</span></p>
     </a>
   </div>
-  <div class="caja caja3 hidden">
-    <a href="#" id="accion" category="ar">
+  <div data-filter="acci" class="caja caja3 hidden">
+    <a href="./games/readyornot.html"  category="ar">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2022/08/Ready-or-Not-Pivigames.jpg?w=670&ssl=1" alt="ReadyOrNot-Game">
     <div class="content-img">
       PESO: 47 GB
@@ -259,8 +640,8 @@
     <p>READY OR NOT<br><span>Acción, Altos Requisitos, Multiplayer Online</span></p>
     </a>
   </div>
-  <div class="caja caja4 hidden">
-    <a href="#" id="accion" category="ar">
+  <div data-filter="acci" class="caja caja4 hidden">
+    <a href="./games/RUST.html"  category="ar">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2021/05/Rust-para-PC-PiviGames.jpg?w=620&ssl=1" alt="Rust-Game">
     <div class="content-img">
       PESO: 7 GB
@@ -272,8 +653,8 @@
     <p>RUST<br><span>Acción, Altos Requisitos, Multiplayer Online, Mundo Abierto, Supervivencia, Terror</span></p>
     </a>
   </div>
-  <div class="caja caja5 hidden">
-    <a href="#" id="accion" category="mr">
+  <div data-filter="acci" class="caja caja5 hidden">
+    <a href="./games/NarutoToBorutoShinobiStrikerdeluxeed.html"  category="mr">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2018/08/NARUTO-TO-BORUTO-SHINOBI-STRIKER-Free-Download-min.jpg?w=670&ssl=1" alt="NarutoToBorutoShinobiStriker-Game">
     <div class="content-img">
       PESO: 6.5 GB
@@ -285,21 +666,8 @@
     <p>NARUTO TO BORUTO SHINOBI STRIKER DELUXE EDITION<br><span>Acción, Anime, Lucha, Medios Requisitos</span></p>
     </a>
   </div>
-  <div class="caja caja6 hidden">
-    <a href="#" id="aventura" category="pr">
-    <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2021/12/Wartales-PiviGames-min.jpg?w=670&ssl=1" alt="Wartales-Game">
-    <div class="content-img">
-      PESO: 9.0 GB
-      <br>
-      UPDATE: 1.21862
-      <br>
-      ONLINE: LIVE
-    </div>
-    <p>WARTALES<br><span>Multiplayer Online, Mundo Abierto, Pocos Requisitos, Rol</span></p>
-    </a>
-  </div>
-  <div class="caja caja7 hidden">
-    <a href="#" id="aventura" category="pr">
+  <div data-filter="acci" class="caja caja7 hidden">
+    <a href="./games/kingdom-two-crowns.html" category="pr">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2021/12/Kingdom-Two-Crowns-juego-pc-pivigames.jpg?w=616&ssl=1" alt="KingdomTwoCrowns-Game">
     <div class="content-img">
       PESO: 1.2 GB
@@ -311,8 +679,8 @@
     <p>KINGDOM TWO CROWNS LOST ISLANDS<br><span>Acción, Aventura, Estrategia, Multiplayer Online, Pocos Requisitos, Simulación</span></p>
     </a>
   </div>
-  <div class="caja caja8 hidden">
-    <a href="#" id="accion" category="ar">
+  <div data-filter="acci" class="caja caja8 hidden">
+    <a href="./games/monster-hunter-rise.html" category="ar">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2023/02/Monster-Hunter-Rise-Juego-para-PC.jpg?w=670&ssl=1" alt="MonsterHunterRise-Game">
     <div class="content-img">
       PESO: 29.16 GB
@@ -321,11 +689,11 @@
       <br>
       ONLINE: LIVE
     </div>
-    <p>MH RISE<br><span>Acción, Altos Requisitos, Anime, Aventura, Multiplayer Online, Mundo Abierto</span></p>
+    <p>MONSTER HUNTER RISE<br><span>Acción, Altos Requisitos, Anime, Aventura, Multiplayer Online, Mundo Abierto</span></p>
     </a>
   </div>
-  <div class="caja caja9 hidden">
-    <a href="#" id="estrategia" category="mr">
+  <div data-filter="estrat" class="caja caja9 hidden">
+    <a href="./games/spellforce-conquest-of-eo.html" category="mr">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2023/02/SpellForce-Conquest-of-Eo-PC-Espanol.jpg?w=670&ssl=1" alt="SpellForceConquestOfEo-Game">
     <div class="content-img">
       PESO: 2.03 GB
@@ -337,8 +705,8 @@
     <p>SPELLFORCE CONQUEST OF EO (SOLO INGLÉS)<br><span>Estrategia, Medios Requisitos</span></p>
     </a>
   </div>
-  <div class="caja caja10 hidden">
-    <a href="#" id="accion" category="ar">
+  <div data-filter="acci" class="caja caja10 hidden">
+    <a href="./games/the-witcher-3.html" category="ar">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2019/06/The-Witcher-3-Next-Gen.jpg?w=576&ssl=1" alt="TheWitcher3NextGen-Game">
     <div class="content-img">
       PESO: 57.79 GB
@@ -350,8 +718,8 @@
     <p>THE WITCHER 3 WILD HUNT COMPLETE EDITION<br><span>Acción, Altos Requisitos, Mundo Abierto, Rol</span></p>
     </a>
   </div>
-  <div class="caja caja10 hidden">
-    <a href="#" id="simulacion" category="pr">
+  <div data-filter="simu" class="caja caja10 hidden">
+    <a href="./games/factorio.html" category="pr">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2021/06/Factorio-Ultima-Version-para-PC.jpg?w=620&ssl=1" alt="Factorio-Game">
     <div class="content-img">
       PESO: 1.3 GB
@@ -363,21 +731,8 @@
     <p>FACTORIO<br><span>2D, Construcción, Multiplayer Online, Simulación</span></p>
     </a>
   </div>
-  <div class="caja caja10 hidden">
-    <a href="#" id="simulacion" category="ar">
-    <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2021/05/Going-Medieval-para-PC-en-Espanol-PiviGames.jpg?w=620&ssl=1" alt="GoingMedieval-Game">
-    <div class="content-img">
-      PESO: 330 MB
-      <br>
-      UPDATE: V0.12.07
-      <br>
-      ONLINE: NOPE
-    </div>
-    <p>GOING MEDIEVAL<br><span>Altos Requisitos, Construcción, Simulación, Supervivencia</span></p>
-    </a>
-  </div>
-  <div class="caja caja1 hidden">
-    <a href="#" id="terror" category="ar">
+  <div data-filter="horror" class="caja caja1 hidden">
+    <a href="./games/the-quarry.html" category="ar">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2022/06/The-Quarry-Pivigames.jpg?w=616&ssl=1" alt="TheQuarry-Game">
     <div class="content-img">
       PESO: 34.90 GB
@@ -389,8 +744,8 @@
     <p>THE QUARRY<br><span>Altos Requisitos, Supervivencia, Terror</span></p>
     </a>
   </div>
-  <div class="caja caja2 hidden">
-    <a href="#" id="survival" category="pr">
+  <div data-filter="survi" class="caja caja2 hidden">
+    <a href="./games/vampire-survivors.html" category="pr">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2022/04/Vampire-Survivors-PiviGames.jpg?w=670&ssl=1" alt="VampireSurvivors-Game">
     <div class="content-img">
       PESO: 109.5 MB
@@ -402,8 +757,8 @@
     <p>VAMPIRE SURVIVORS<br><span>Pocos Requisitos, Supervivencia</span></p>
     </a>
   </div>
-  <div class="caja caja3 hidden">
-    <a href="#" id="accion" category="ar">
+  <div data-filter="acci" class="caja caja3 hidden">
+    <a href="./games/sifu.html" category="ar">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2022/02/Sifu-PiviGames.jpg?w=680&ssl=1" alt="Sifu-Game">
     <div class="content-img">
       PESO: 16 GB
@@ -415,8 +770,8 @@
     <p>SIFU<br><span>Acción, Altos Requisitos</span></p>
     </a>
   </div>
-  <div class="caja caja4 hidden">
-    <a href="#" id="accion" category="mr">
+  <div data-filter="acci" class="caja caja4 hidden">
+    <a href="./games/spongebob-the-cosmic-shake.html" category="mr">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2023/02/SpongeBob-SquarePants-The-Cosmic-Shake-PC-Espanol.jpg?w=670&ssl=1" alt="SpongeBobSquarePantsTheCosmicShake-Game">
     <div class="content-img">
       PESO: 7.03 GB
@@ -428,8 +783,8 @@
     <p>BOB ESPONJA: THE COSMIC SHAKE<br><span>Acción, Medios Requisitos, Plataformas</span></p>
     </a>
   </div>
-  <div class="caja caja5 hidden">
-    <a href="#" id="survival" category="pr">
+  <div data-filter="survi" class="caja caja5 hidden">
+    <a href="./games/project-zomboid.html" category="pr">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2021/07/Project-Zomboid-ultima-version-para-PC-PiviGames.jpg?w=616&ssl=1" alt="ProjectZomboid-Game">
     <div class="content-img">
       PESO: 1.67 GB
@@ -441,8 +796,8 @@
     <p>PROJECT ZOMBOID<br><span>32 Bits, Multiplayer Online, Pantalla Dividida, Pocos Requisitos, Supervivencia, Zombies</span></p>
     </a>
   </div>
-  <div class="caja caja6 hidden">
-    <a href="#" id="coches" category="pr">
+  <div data-filter="cars" class="caja caja6 hidden">
+    <a href="./games/american-truck-simulator.html" category="pr">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2021/09/American-Truck-Simulator-Wyoming-PiviGames-Juego.jpg?w=616&ssl=1" alt="AmericanTruckSimulator-Game">
     <div class="content-img">
       PESO: 7.7 GB
@@ -454,8 +809,8 @@
     <p>AMERICAN TRUCK SIMULATOR<br><span>Carreras, Multiplayer Online, Mundo Abierto, Pocos Requisitos, Simulación</span></p>
     </a>
   </div>
-  <div class="caja caja7 hidden">
-    <a href="#" id="accion" category="ar">
+  <div data-filter="acci" class="caja caja7 hidden">
+    <a href="./games/stranger-of-paradise.html" category="ar">
     <img src="https://cdn1.epicgames.com/offer/d2b282a6b53e409a8f8329d3d3356f21/EGS_STRANGEROFPARADISEFINALFANTASYORIGIN_KOEITECMOGAMESCOLTD_S1_2560x1440-60ba34b4e6c919c9a1afd4cf4b8faeb8_2560x1440-60ba34b4e6c919c9a1afd4cf4b8faeb8" alt="StrangerOfParadiseFinalFantasyOrigin-Game">
     <div class="content-img">
       PESO: 56 GB
@@ -467,8 +822,8 @@
     <p>STRANGER OF PARADISE FINAL FANTASY ORIGIN<br><span>Acción, Altos Requisitos, Rol, RPG</span></p>
     </a>
   </div>
-  <div class="caja caja8 hidden">
-    <a href="#" id="accion" category="ar">
+  <div data-filter="acci" class="caja caja8 hidden">
+    <a href="./games/dark-souls-3.html" category="ar">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2018/01/Dark-Souls-III-Free-Download.jpg?w=620&ssl=1" alt="DarkSoulsIII3-Game">
     <div class="content-img">
       PESO: 22.53 GB
@@ -480,8 +835,8 @@
     <p>DARK SOULS 3 DELUXE EDITION <br><span>Acción, Altos Requisitos, Aventura, Mundo Abierto, Rol</span></p>
     </a>
   </div>
-  <div class="caja caja9 hidden">
-    <a href="#" id="accion" category="ar">
+  <div data-filter="acci" class="caja caja9 hidden">
+    <a href="./games/v-rising.html" category="ar">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2022/05/V-Rising-Juego.jpg?w=670&ssl=1" alt="VRising-Game">
     <div class="content-img">
       PESO: 2.9 GB
@@ -493,8 +848,8 @@
     <p>V RISING<br><span>Acción, Multiplayer Online, Mundo Abierto, Supervivencia, Terror</span></p>
     </a>
   </div>
-  <div class="caja caja10 hidden">
-    <a href="#" id="accion" category="ar">
+  <div data-filter="acci" class="caja caja10 hidden">
+    <a href="./games/ccf7.html" category="ar">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2022/12/crisis-core-final-fantasy-vii-reunion-pc-juego-pivigames.jpg?w=616&ssl=1" alt="CrisisCoreFinalFantasyVIIReunion-Game">
     <div class="content-img">
       PESO: 16.17 GB
@@ -506,8 +861,8 @@
     <p>CRISIS CORE – FINAL FANTASY VII – REUNION<br><span>Acción, Altos Requisitos, Anime, Mundo Abierto</span></p>
     </a>
   </div>
-  <div class="caja caja10 hidden">
-    <a href="#" id="terror" category="ar">
+  <div data-filter="horror" class="caja caja10 hidden">
+    <a href="./games/escape-the-backrooms.html" category="ar">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2023/01/Escape-the-Backrooms-Juego-PC.jpg?w=670&ssl=1" alt="EscapeTheBackrooms-Game">
     <div class="content-img">
       PESO: 7 GB
@@ -519,8 +874,8 @@
     <p>ESCAPE THE BACKROOMS<br><span>Altos Requisitos, Multiplayer Online, Terror</span></p>
     </a>
   </div>
-  <div class="caja caja10 hidden">
-    <a href="#" id="terror" category="pr">
+  <div data-filter="horror" class="caja caja10 hidden">
+    <a href="./games/hidden-deep.html" category="pr">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2022/02/Hidden-Deep-PiviGames.jpg?w=670&ssl=1" alt="HiddenDeep-Game">
     <div class="content-img">
       PESO: 700 MB
@@ -532,21 +887,21 @@
     <p>HIDDEN DEEP<br><span>Acción, Multiplayer Online, Pocos Requisitos, Terror</span></p>
     </a>
   </div>
-  <div class="caja caja1 hidden">
-    <a href="#" id="accion" category="ar">
+  <div data-filter="acci" class="caja caja1 hidden">
+    <a href="./games/deep-rock-galactic.html" category="ar">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2018/12/Descargar-Deep-Rock-Galactic-PC-Espa%C3%B1ol-PiviGames-min.jpg?w=620&ssl=1" alt="DeepRockGalactic-Game">
     <div class="content-img">
       PESO: 1.9 GB
       <br>
-      UPDATE: V10316341
+      UPDATE: V1.37.83919
       <br>
       ONLINE: LIVE
     </div>
     <p>DEEP ROCK GALACTIC<br><span>Acción, Altos Requisitos, Indie, Multiplayer Online, Shooter</span></p>
     </a>
   </div>
-  <div class="caja caja2 hidden">
-    <a href="#" id="accion" category="ar">
+  <div data-filter="acci" class="caja caja2 hidden">
+    <a href="./games/the-king-of-fighter-xv.html" category="ar">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2022/02/THE-KING-OF-FIGHTERS-XV-PiviGames.jpg?w=670&ssl=1" alt="TheKingOfFightersXV-Game">
     <div class="content-img">
       PESO: 29.9 GB
@@ -558,8 +913,8 @@
     <p>THE KING OF FIGHTER XV<br><span>Altos Requisitos, Anime, Lucha, Pantalla Dividida</span></p>
     </a>
   </div>
-  <div class="caja caja3 hidden">
-    <a href="#" id="coches" category="mr">
+  <div data-filter="cars"  class="caja caja3 hidden">
+    <a href="./games/brick-rigs.html" category="mr">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2017/01/Brick-Rigs.jpg?resize=1024%2C576&ssl=1" alt="BrickRigs-Game">
     <div class="content-img">
       PESO: 785 MB
@@ -571,8 +926,8 @@
     <p>BRICK RIGS<br><span>Carreras, Construcción, Medios Requisitos, Multiplayer Online, Simulación</span></p>
     </a>
   </div>
-  <div class="caja caja4 hidden">
-    <a href="#" id="estrategia" category="pr">
+  <div data-filter="estrat" class="caja caja4 hidden">
+    <a href="./games/Northgard.html" category="pr">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2019/09/Northgard-Conquest-PC-Espa%C3%B1ol-Gratis.jpg?w=620&ssl=1" alt="NorthgardConquest-Game">
     <div class="content-img">
       PESO: 705 MB
@@ -584,8 +939,8 @@
     <p>NORTHGARD<br><span>Estrategia, Indie, Pocos Requisitos</span></p>
     </a>
   </div>
-  <div class="caja caja5 hidden">
-    <a href="#" id="accion" category="mr">
+  <div data-filter="acci" class="caja caja5 hidden">
+    <a href="./games/medal-of-honor-warfighter.html" category="mr">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2017/04/Medal_of_Honor_Warfighter_New_Campaign_Gameplay_Foot.jpg?resize=1024%2C575&ssl=1" alt="MedalOfHonorWarfighter-Game">
     <div class="content-img">
       PESO: 15 GB
@@ -597,8 +952,8 @@
     <p>MEDAL OF HONOR WARFIGHTER<br><span>Acción, Guerra, Medios Requisitos, Shooter</span></p>
     </a>
   </div>
-  <div class="caja caja6 hidden">
-    <a href="#" id="aventura" category="mr">
+  <div data-filter="acci" class="caja caja6 hidden">
+    <a href="./games/potion-permit.html" category="mr">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2022/09/Potion-Permit-Pivigames.jpg?w=670&ssl=1" alt="PotionPermit-Game">
     <div class="content-img">
       PESO: 241 MB
@@ -610,8 +965,8 @@
     <p>POTION PERMIT<br><span>Acción, Aventura, Medios Requisitos, Pixelados, Rol, RPG</span></p>
     </a>
   </div>
-  <div class="caja caja7 hidden">
-    <a href="#" id="accion" category="ar">
+  <div data-filter="acci" class="caja caja7 hidden">
+    <a href="./games/postal4-no-regerts.html" category="ar">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2020/02/POSTAL-4-No-Regerts-Free-Download.jpg?w=670&ssl=1" alt="POSTAL4NoRegerts-Game">
     <div class="content-img">
       PESO: 13.9 GB
@@ -623,8 +978,8 @@
     <p>POSTAL 4 NO REGERTS<br><span>Acción, Altos Requisitos, Mundo Abierto</span></p>
     </a>
   </div>
-  <div class="caja caja8 hidden">
-    <a href="#" id="accion" category="pr">
+  <div data-filter="acci" class="caja caja8 hidden">
+    <a href="./games/broke-protocol.html" category="pr">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2021/12/Broke-Protocol-Ultima-Version-PiviGames.jpg?w=616&ssl=1" alt="BrokeProtocol-Game">
     <div class="content-img">
       PESO: 163 MB
@@ -636,8 +991,8 @@
     <p>BROKE PROTOCOL<br><span>Acción, Aventura, Multiplayer Online, Pocos Requisitos, Sandbox</span></p>
     </a>
   </div>
-  <div class="caja caja9 hidden">
-    <a href="#" id="aventura" category="pr">
+  <div data-filter="acci" class="caja caja9 hidden">
+    <a href="./games/rain-world.html" category="pr">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2017/03/RainWorld-Downpour-Gratis-para-PC.jpg?w=616&ssl=1" alt="RainWorldDownpour-Game">
     <div class="content-img">
       PESO: 3.8 GB
@@ -649,21 +1004,8 @@
     <p>RAIN WORLD<br><span>Acción, Aventura, Indie, Pantalla Dividida, Plataformas, Pocos Requisitos</span></p>
     </a>
   </div>
-  <div class="caja caja10 hidden">
-    <a href="#" id="survival" category="ar">
-    <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2018/08/Green-Hell-Free-Download-min.jpg?w=670&ssl=1" alt="GreenHell-Game">
-    <div class="content-img">
-      PESO: 4.2 GB
-      <br>
-      UPDATE: V2.4.0
-      <br>
-      ONLINE: LIVE
-    </div>
-    <p>GREEN HELL<br><span>Altos Requisitos, Aventura, Multiplayer Online, Mundo Abierto, Supervivencia</span></p>
-    </a>
-  </div>
-  <div class="caja caja10 hidden">
-    <a href="#" id="aventura" category="mr">
+  <div data-filter="acci" class="caja caja10 hidden">
+    <a href="./games/grounded.html" category="mr">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2020/07/Grounded-Juego.jpg?w=670&ssl=1" alt="Grounded-Game">
     <div class="content-img">
       PESO: 3 GB
@@ -675,21 +1017,8 @@
     <p>GROUNDED<br><span>Acción, Medios Requisitos, Multiplayer Online, Supervivencia</span></p>
     </a>
   </div>
-  <div class="caja caja10 hidden">
-    <a href="#" id="terror" category="ar">
-    <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2020/05/World-War-Z-Aftermath-PiviGames.jpg?w=670&ssl=1" alt="WorldWarZAftermath-Game">
-    <div class="content-img">
-      PESO: 29 GB
-      <br>
-      UPDATE: V24.01.2023
-      <br>
-      ONLINE: NOPE
-    </div>
-    <p>WORLD WAR Z<br><span>Acción, Altos Requisitos, Shooter, Supervivencia, Terror, Zombies</span></p>
-    </a>
-  </div>
-  <div class="caja caja1 hidden">
-    <a href="#" id="accion" category="mr">
+  <div data-filter="acci" class="caja caja1 hidden">
+    <a href="./games/osiris-new-dawn.html" category="mr">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2018/02/Osiris-New-Dawn-para-PC-PiviGames.jpg?w=616&ssl=1" alt="OsirisNewDawn-Game">
     <div class="content-img">
       PESO: 2.7 GB
@@ -701,8 +1030,8 @@
     <p>OSIRIS NEW DAWN<br><span>Acción, Medios Requisitos, Supervivencia</span></p>
     </a>
   </div>
-  <div class="caja caja2 hidden">
-    <a href="#" id="aventura" category="ar">
+  <div data-filter="acci" class="caja caja2 hidden">
+    <a href="./games/one-piece-odyssey.html" category="ar">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2023/01/one-piece-odyssey-pc-juego-pivigames.jpg?w=616&ssl=1" alt="OnePieceOdyssey-Game">
     <div class="content-img">
       PESO: 28.9 GB
@@ -714,8 +1043,8 @@
     <p>ONE PIECE ODYSSEY<br><span>Altos Requisitos, Anime, Aventura, Rol</span></p>
     </a>
   </div>
-  <div class="caja caja3 hidden">
-    <a href="#" id="simulacion" category="ar">
+  <div data-filter="simu" class="caja caja3 hidden">
+    <a href="./games/cafe-owner-simulator.html" category="ar">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2023/01/Cafe-Owner-Simulator-Juego.jpg?w=670&ssl=1" alt="CafeOwnerSimulator-Game">
     <div class="content-img">
       PESO: 4.5 GB
@@ -727,8 +1056,8 @@
     <p>CAFE OWNER SIMULATOR<br><span>Altos Requisitos, Sandbox, Simulación</span></p>
     </a>
   </div>
-  <div class="caja caja4 hidden">
-    <a href="#" id="estrategia" category="mr">
+  <div data-filter="estrat" class="caja caja4 hidden">
+    <a href="./games/kingdom-reborn.html" category="mr">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2021/02/Kingdoms-Reborn-PiviGames.jpg?w=670&ssl=1" alt="KingdomsReborn-Game">
     <div class="content-img">
       PESO: 556 MB
@@ -740,8 +1069,8 @@
     <p>KINGDOMS REBORN<br><span>Construcción, Medios Requisitos, Multiplayer Online, Sandbox, Supervivencia</span></p>
     </a>
   </div>
-  <div class="caja caja5 hidden">
-    <a href="#" id="survival" category="ar">
+  <div data-filter="survi" class="caja caja5 hidden">
+    <a href="./games/lost-world.html" category="ar">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2023/01/Lost-World-Juego.jpg?w=670&ssl=1" alt="LostWorld-Game">
     <div class="content-img">
       PESO: 6 GB
@@ -753,8 +1082,8 @@
     <p>LOST WORLD<br><span>Altos Requisitos, Multiplayer Online, Mundo Abierto, Supervivencia</span></p>
     </a>
   </div>
-  <div class="caja caja6 hidden">
-    <a href="#" id="accion" category="pr">
+  <div data-filter="acci" class="caja caja6 hidden">
+    <a href="./games/ultimate-chicken-horse.html" category="pr">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2017/01/Ultimate-Chicken-Horse-Free-Download.jpg?w=620&ssl=1" alt="UltimateChickenHorse-Game">
     <div class="content-img">
       PESO: 544 MB
@@ -766,8 +1095,8 @@
     <p>ULTIMATE CHICKEN HORSE<br><span>Acción, Lucha, Multiplayer Online, Pantalla Dividida, Pocos Requisitos</span></p>
     </a>
   </div>
-  <div class="caja caja7 hidden">
-    <a href="#" id="accion" category="pr">
+  <div data-filter="acci" class="caja caja7 hidden">
+    <a href="./games/pummel-party.html" category="pr">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2021/05/Pummel-Party-PiviGames.jpg?w=670&ssl=1" alt="PummelParty-Game">
     <div class="content-img">
       PESO: 820 MB
@@ -779,8 +1108,8 @@
     <p>PUMMEL PARTY<br><span>Acción, Multiplayer Online, Pantalla Dividida, Pocos Requisitos</span></p>
     </a>
   </div>
-  <div class="caja caja8 hidden">
-    <a href="#" id="simulacion" category="mr">
+  <div data-filter="simu" class="caja caja8 hidden">
+    <a href="./games/aquatico.html" category="mr">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2023/01/Aquatico-Juego.jpg?w=670&ssl=1" alt="Aquatico-Game">
     <div class="content-img">
       PESO: 2.9 GB
@@ -792,8 +1121,8 @@
     <p>ACUATICO<br><span>Construcción, Medios Requisitos, Supervivencia</span></p>
     </a>
   </div>
-  <div class="caja caja9 hidden">
-    <a href="#" id="aventura" category="pr">
+  <div data-filter="acci" class="caja caja9 hidden">
+    <a href="./games/amongus.html" category="pr">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2022/08/Among-US-Ultima-Version-Pivigames.jpg?w=616&ssl=1" alt="AmongUs-Game">
     <div class="content-img">
       PESO: 130 MB
@@ -805,21 +1134,8 @@
     <p>AMONG US<br><span>2D, Acción, Aventura, Multiplayer Online, Pantalla Dividida, Pocos Requisitos</span></p>
     </a>
   </div>
-  <div class="caja caja10 hidden">
-    <a href="#" id="estrategia" category="mr">
-    <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2020/07/SID-MEIERS-Civilization-VI-PiviGames.jpg?w=620&ssl=1" alt="SIDMEIERSCivilizationVI-Game">
-    <div class="content-img">
-      PESO: 8 GB
-      <br>
-      UPDATE: V1.0.12.31
-      <br>
-      ONLINE: LIVE
-    </div>
-    <p>CIVILIZATION VI<br><span>Estrategia, Medios Requisitos, Multiplayer Online, Simulación</span></p>
-    </a>
-  </div>
-  <div class="caja caja10 hidden">
-    <a href="#" id="terror" category="ar">
+  <div data-filter="horror" class="caja caja10 hidden">
+    <a href="./games/PHASMOPHOBIA.html" category="ar">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2022/09/Phasmophobia-Apocalypse-Pivigames.png?w=800&ssl=1" alt="Phasmophobia-Game">
     <div class="content-img">
       PESO: 7 GB
@@ -831,8 +1147,8 @@
     <p>PHASMOPHOBIA<br><span>Altos Requisitos, Multiplayer Online, Terror</span></p>
     </a>
   </div>
-  <div class="caja caja10 hidden">
-    <a href="#" id="accion" category="mr">
+  <div data-filter="acci" class="caja caja10 hidden">
+    <a href="./games/avorion.html" category="mr">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2017/03/Avorion-Free-Download-1.jpg?w=620&ssl=1" alt="Avorion-Game">
     <div class="content-img">
       PESO: 630 MB
@@ -844,8 +1160,8 @@
     <p>AVORION<br><span>Acción, Indie, Medios Requisitos, Simulación, Supervivencia</span></p>
     </a>
   </div>
-  <div class="caja caja1 hidden">
-    <a href="#" id="simulacion" category="pr">
+  <div data-filter="simu" class="caja caja1 hidden">
+    <a href="./games/the-sims4.html" category="pr">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2020/01/Descargar-The-Sims-4-Ultima-Version-2020-PC-Espa%C3%B1ol-Gratis.jpg?w=620&ssl=1" alt="TheSims4-Game">
     <div class="content-img">
       PESO: 24 GB
@@ -857,8 +1173,8 @@
     <p>THE SIMS 4<br><span>Aventura, Pocos Requisitos, Simulación</span></p>
     </a>
   </div>
-  <div class="caja caja2 hidden">
-    <a href="#" id="estrategia" category="ar">
+  <div data-filter="estrat" class="caja caja2 hidden">
+    <a href="./games/humankind.html" category="ar">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2021/08/HUMANKIND-PiviGames-Juego.jpg?w=670&ssl=1" alt="HUMANKIND-Game">
     <div class="content-img">
       PESO: 9.89 GB
@@ -870,8 +1186,8 @@
     <p>HUMANKIND<br><span>Altos Requisitos, Construcción, Estrategia, Multiplayer Online</span></p>
     </a>
   </div>
-  <div class="caja caja3 hidden">
-    <a href="#" id="aventura" category="mr">
+  <div data-filter="acci" class="caja caja3 hidden">
+    <a href="./games/cultofthelamb.html"  category="mr">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2022/08/Cult-of-the-Lamb-Pivigames.jpg?w=670&ssl=1" alt="CultoftheLamb-Game">
     <div class="content-img">
       PESO: 713 MB
@@ -883,8 +1199,8 @@
     <p>CULT OF THE LAMB<br><span>2D, Aventura, Medios Requisitos, Rol</span></p>
     </a>
   </div>
-  <div class="caja caja4 hidden">
-    <a href="#" id="aventura" category="ar">
+  <div data-filter="acci" class="caja caja4 hidden">
+    <a href="./games/aplaguetalerequiem.html" category="ar">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2022/10/A-Plague-Tale-Requiem-Pivigames.jpg?w=670&ssl=1" alt="APlagueTaleRequiem-Game">
     <div class="content-img">
       PESO: 37.52 GB
@@ -896,21 +1212,8 @@
     <p>A PLAGUE TALE REQUIEM<br><span>Acción, Altos Requisitos, Aventura</span></p>
     </a>
   </div>
-  <div class="caja caja5 hidden">
-    <a href="#" id="survival" category="pr">
-    <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2022/10/Rimworld-Biotech-Pivigames.jpg?w=616&ssl=1" alt="Rimworld-Game">
-    <div class="content-img">
-      PESO: 555 MB
-      <br>
-      UPDATE: V1.4.3613
-      <br>
-      ONLINE: NOPE
-    </div>
-    <p>RIMWORLD<br><span>32 Bits, Construcción, Pixelados, Pocos Requisitos, Sandbox, Supervivencia</span></p>
-    </a>
-  </div>
-  <div class="caja caja6 hidden">
-    <a href="#" id="aventura" category="mr">
+  <div data-filter="acci" class="caja caja6 hidden">
+    <a href="./games/force-of-nature-2.html" category="mr">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2021/12/Force-Of-Nature-II-Ghost-Keeper-para-PC.jpg?w=616&ssl=1" alt="ForceofNatureII2GhostKeeper-Game">
     <div class="content-img">
       PESO: 700 MB
@@ -922,8 +1225,8 @@
     <p>FORCE OF NATURE 2 GHOST KEEPER<br><span>Aventura, Medios Requisitos, Rol, Sandbox, Supervivencia</span></p>
     </a>
   </div>
-  <div class="caja caja7 hidden">
-    <a href="#" id="terror" category="ar">
+  <div data-filter="horror" class="caja caja7 hidden">
+    <a href="./games/hello-neighbor-2.html" category="ar">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2020/07/Hello-Neighbor-2-Juego-min.jpg?w=620&ssl=1" alt="HelloNeighbor2-Game">
     <div class="content-img">
       PESO: 4.5 GB
@@ -935,21 +1238,21 @@
     <p>HELLO NEIGHBOR 2<br><span>Altos Requisitos, Supervivencia, Terror</span></p>
     </a>
   </div>
-  <div class="caja caja8 hidden">
-    <a href="#" id="accion" category="mr">
+  <div data-filter="acci" class="caja caja8 hidden">
+    <a href="./games/teenagemutantninjaturtle.html" category="mr">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2022/06/Teenage-Mutant-Ninja-Turtles-Shredders-Revenge-Pivigames.jpg?w=670&ssl=1" alt="TeenageMutantNinjaTurtlesShreddersRevenge-Game">
     <div class="content-img">
       PESO: 500 MB
       <br>
-      UPDATE: V1.0.0.252
+      UPDATE: V1.0.0.258
       <br>
       ONLINE: NOPE
     </div>
     <p>TEENAGE MUTANT NINJA TURTLES SHREDDERS REVENGE<br><span>Lucha, Medios Requisitos, Pantalla Dividida, Pixelados</span></p>
     </a>
   </div>
-  <div class="caja caja9 hidden">
-    <a href="#" id="estrategia" category="mr">
+  <div data-filter="estrat" class="caja caja9 hidden">
+    <a href="./games/frozenheim.html" category="mr">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2022/12/Frozenheim-para-PC-Espanol-Pivigames.jpg?w=576&ssl=1" alt="Frozenheim-Game">
     <div class="content-img">
       PESO: 4.9 GB
@@ -961,21 +1264,8 @@
     <p>FROZENHEIM<br><span>Construcción, Estrategia, Medios Requisitos, Multiplayer Online, Supervivencia</span></p>
     </a>
   </div>
-  <div class="caja caja10 hidden">
-    <a href="#" id="estrategia" category="pr">
-    <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2022/02/Hearts-of-Iron-IV-Blood-Alone-Pivigames.jpg?w=616&ssl=1" alt="HeartsOfIronIV4BloodAlone-Game">
-    <div class="content-img">
-      PESO: 3.99 GB
-      <br>
-      UPDATE: V1.12.8
-      <br>
-      ONLINE: LIVE
-    </div>
-    <p>HEARTS OF IRON IV<br><span>Estrategia, Multiplayer Online, Pocos Requisitos</span></p>
-    </a>
-  </div>
-  <div class="caja caja10 hidden">
-    <a href="#" id="survival" category="ar">
+  <div data-filter="survi" class="caja caja10 hidden">
+    <a href="./games/icarus.html" category="ar">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2021/12/ICARUS-PiviGames.jpg?w=670&ssl=1" alt="ICARUS-Game">
     <div class="content-img">
       PESO: 19.5 GB
@@ -987,8 +1277,8 @@
     <p>ICARUS<br><span>Altos Requisitos, Mundo Abierto, Supervivencia</span></p>
     </a>
   </div>
-  <div class="caja caja10 hidden">
-    <a href="#" id="aventura" category="ar">
+  <div data-filter="acci" class="caja caja10 hidden">
+    <a href="./games/empire-of-the-undergrowth.html" category="ar">
     <img src="https://i0.wp.com/pivigames.blog/wp-content/uploads/2017/12/Empires-of-the-Undergrowth-Free-Download-min.jpg?w=620&ssl=1" alt="EmpiresOfTheUndergrowth-Game">
     <div class="content-img">
       PESO: 3.83 GB
@@ -1002,6 +1292,7 @@
   </div>
 </div>
 
+</div>
 <!-- FEED -->
 
 
@@ -1019,13 +1310,49 @@
 <!-- FOOTER -->
 
 
-    <footer>
-      <h1>Copyright © Latin Games 2023</h1>
-      <h3>Made by Felipe Rodriguez</h3>
-    </footer>
+<!-- FOOTER -->
+
+
+<footer class="footer-distributed">
+
+			<div class="footer-right">
+
+				<a href="https://www.linkedin.com/in/felipe-rodriguez-web-cs-code/"><i class="fa fa-linkedin"></i></a>
+				<a href="https://github.com/okh0c"><i class="fa fa-github"></i></a>
+
+			</div>
+
+			<div class="footer-left">
+
+				<p class="footer-links">
+					<a class="link-1" href="../index.html">Inicio</a>
+
+					<a href="catalogo.html">Catalogo</a>
+
+					<a href="programas.html">Programas</a>
+
+					<a href="acercademi.html">Nosotros</a>
+
+					<a href="contacto.html">Contacto</a>
+
+				</p>
+
+				<p>LatinGames &copy; 2023</p>
+			</div>
+
+		</footer>
 
 
 <!-- ___ -->
+
+
+<!-- ___ -->
+
+<script type="text/javascript">
+
+
+
+</script>
 
 
 <!-- SCRIPTS -->
@@ -1036,9 +1363,10 @@
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   <script src="../js/script.js"></script>
   <script src="../js/snow.js"></script>
-  <script defer src="../js/app.js"></script>
+  <script src="../js/app.js"></script>
   <script src="../js/filter.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
 
 <!-- ___ -->
 
