@@ -42,21 +42,23 @@
 
 <!-- CONTACTO -->
 
-<form class="contact" action="index.html">
+<div class="contact">
+  <form onsumbit="sendEmail(); reset(); return false;">
   <h3>CONTACTO</h3>
   <label for="nombres"></label>
-  <input class="inputcontact" type="text" name="nombres" placeholder="Nombre">
+  <input class="inputcontact" type="text" name="name" placeholder="Nombre">
 
   <label for="correo"></label>
-  <input class="inputcontact" type="text" name="correo" placeholder="Correo">
+  <input class="inputcontact" type="email" name="email" placeholder="Correo">
 
   <label for="celular"></label>
-  <input class="inputcontact" type="text" name="telefono" placeholder="Telefono">
+  <input class="inputcontact" type="text" name="phone" placeholder="Telefono">
 
   <label for="mensaje"></label>
-  <textarea name="mensaje" placeholder="Introduzca su mensaje" id="mensaje"></textarea>
+  <textarea name="message" placeholder="Introduzca su mensaje" id="mensaje"></textarea>
   <input class="inputcontact" type="submit" value="Enviar">
 </form>
+</div>
 
 <!-- ___ -->
 
@@ -122,6 +124,25 @@
 <!-- SCRIPTS -->
 
 
+  <script>
+    function sendEmail(){
+          Email.send({
+        SecureToken: "28d7a97a-ff64-4758-a060-edc940820d05",
+        To : 'ckoide274@gmail.com',
+        From : document.getElementById("email").value,
+        Subject : "Nueva solicitud de contacto",
+        Body : "Name: " + document.getElementById("name").value
+            + "<br> Email: " + document.getElementById("email").value
+            + "<br> Phone : " + document.getElementById("phone").value
+            + "<br> Message : " + document.getElementById("message").value
+    }).then(
+      message => alert(message) 
+    );
+    }
+
+
+  </script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
