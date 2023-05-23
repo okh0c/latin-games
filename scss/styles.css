@@ -36,6 +36,7 @@
   --dark-shadow: #3e2904;
 }
 
+
 html {
   font-size: 62.5%;
   font-family: "Montserrat", sans-serif;
@@ -313,6 +314,9 @@ body {
   background-position: 0 -45px;
   transition: background-position 0.2s;
 }
+
+
+
 
 .ul-pagination .li-pagination.active {
   color: #fff;

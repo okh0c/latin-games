@@ -42,6 +42,111 @@
 <!-- ___ -->
 
 
+<style>
+  /* Estilos para el fondo difuminado */
+  #overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Color de fondo semi-transparente */
+    z-index: 9999;
+    display: none; /* Ocultar inicialmente */
+  }
+
+  /* Estilos para el popup */
+  #popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 10000;
+    display: none; /* Ocultar inicialmente */
+  }
+
+  #popup h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 24px;
+    text-align: center;
+  }
+
+  #popup p {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  #popup input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  #popup button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+</style>
+</head>
+
+<body>
+<div id="overlay"></div>
+<div id="popup">
+  <h4>Bienvenido</h4>
+  <p>Por favor, ingresa tu nombre de usuario:</p>
+  <input type="text" id="usernameInput" placeholder="Nombre de usuario">
+  <button onclick="closePopup()">Guardar</button>
+</div>
+
+<script>
+  function openPopup() {
+    var overlay = document.getElementById('overlay');
+    var popup = document.getElementById('popup');
+
+    overlay.style.display = 'block';
+    popup.style.display = 'block';
+  }
+
+  function closePopup() {
+    var overlay = document.getElementById('overlay');
+    var popup = document.getElementById('popup');
+    var usernameInput = document.getElementById('usernameInput');
+    var username = usernameInput.value;
+
+    // Guardar el nombre de usuario en el almacenamiento local del navegador
+    localStorage.setItem('username', username);
+
+    overlay.style.display = 'none';
+    popup.style.display = 'none';
+
+    // Mostrar mensaje de bienvenida
+    alert('Bienvenido, ' + username + '!');
+  }
+
+  // Verificar si el nombre de usuario ya ha sido guardado
+  var storedUsername = localStorage.getItem('username');
+
+  if (storedUsername) {
+    // Mostrar mensaje de bienvenida si el nombre de usuario ya existe
+    alert('Bienvenido de nuevo, ' + storedUsername + '!');
+  } else {
+    // Abrir el popup si el nombre de usuario no ha sido ingresado antes
+    openPopup();
+  }
+</script>
+
 <!-- SLIDER -->
 
 
@@ -309,6 +414,7 @@
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   <script src="js/script.js"></script>
+  <script src="js/user.js"></script>
 
 
 <!-- ___ -->
